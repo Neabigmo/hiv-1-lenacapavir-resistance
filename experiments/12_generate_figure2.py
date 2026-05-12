@@ -124,7 +124,7 @@ def create_raincloud_panel(ax):
         Patch(facecolor=CONTEXT_COLORS['natural_polymorphism'], label='Natural polymorphism', alpha=0.8),
         Patch(facecolor=MUTATION_COLORS['double'], label='Combination mutant', alpha=0.8)
     ]
-    ax.legend(handles=legend_elements, loc='lower right', fontsize=7, framealpha=0.95, ncol=2)
+    ax.legend(handles=legend_elements, loc='upper right', fontsize=7, framealpha=0.95, ncol=2)
 
 
 def create_pooled_forest(ax):
