@@ -1,0 +1,14 @@
+{
+  "observation_id": "Unique identifier for each observation",
+  "Mutation": "Mutation(s) tested (single or combination)",
+  "mutation_type": "single or double",
+  "FC_numeric": "Original fold-change value",
+  "log10_FC": "Log10-transformed fold-change (standardized outcome)",
+  "Subtype": "HIV-1 subtype",
+  "context_tier": "Experimental context: clinical/in_vitro/natural_polymorphism",
+  "assay_type": "Cell line or assay system used",
+  "study_source": "Primary study identifier",
+  "quality_score": "Quality tier (1=low, 2=moderate, 3=high)",
+  "data_provenance": "Full provenance string",
+  "harmonized_date": "Date of harmonization"
+}

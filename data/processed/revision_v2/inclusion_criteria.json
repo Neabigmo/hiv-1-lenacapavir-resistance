@@ -1,0 +1,21 @@
+{
+  "inclusion": [
+    "HIV-1 lenacapavir resistance data",
+    "Quantitative phenotypic measurements (fold-change, EC50, IC50, Kd)",
+    "Clinical isolates, in vitro selection, or site-directed mutagenesis",
+    "Peer-reviewed publications or authoritative clinical trial reports",
+    "Published 2020-2026 (lenacapavir development period)"
+  ],
+  "exclusion": [
+    "HIV-2 data (analyzed separately)",
+    "Qualitative descriptions only (no numeric values)",
+    "Non-capsid inhibitors",
+    "Review articles without original data",
+    "Duplicate publications of same data"
+  ],
+  "quality_assessment": {
+    "tier_3_high": "Clinical isolates with standardized assay",
+    "tier_2_moderate": "In vitro selection or SDM with validated methods",
+    "tier_1_low": "Natural polymorphism inference or indirect measurements"
+  }
+}

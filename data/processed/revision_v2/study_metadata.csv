@@ -1,0 +1,7 @@
+study_id,first_author,year,title,mutations_reported,n_observations,context,assay_type,quality_tier
+PMC12077089,Andreatta,2024,In vitro selection of lenacapavir resistance,"['L56V', 'N57H']",2,in_vitro_selection,MT-2_cells,2
+PMC9600929,Yant,2022,Structural mechanisms of lenacapavir resistance,"['M66I', 'Q67H', 'N74D', 'Q67H+N74D', 'Q67H+K70R']",5,in_vitro_SDM,MT-4_cells,2
+JID2025,CAPELLA_investigators,2025,CAPELLA 2-year clinical isolates,"['M66I+N74D+A105T', 'K70N+N74K', 'Q67H+K70R']",3,clinical_isolate,PBMC,3
+JAC2025,Uganda_study,2025,Uganda A1/D subtype natural polymorphisms,['Q67H+K70R'],1,natural_polymorphism,phenotypic_assay,2
+NATAP2022,Margot,2022,Clinical resistance emergence,"['Q67H', 'N74D', 'K70R']",3,clinical_isolate,MT-4_cells,3
+PMC8092519,Link,2021,Lenacapavir mechanism and resistance profile,['M66I'],1,in_vitro_SDM,MT-4_cells,2

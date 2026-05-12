@@ -1,0 +1,25 @@
+{
+  "identification": {
+    "pubmed_search": 82,
+    "additional_sources": 5,
+    "total_identified": 87
+  },
+  "screening": {
+    "after_deduplication": 78,
+    "title_abstract_screened": 78,
+    "excluded_not_relevant": 56,
+    "full_text_assessed": 22
+  },
+  "eligibility": {
+    "full_text_assessed": 22,
+    "excluded_no_quantitative_data": 8,
+    "excluded_hiv2_only": 3,
+    "included_studies": 11
+  },
+  "included": {
+    "studies_in_synthesis": 11,
+    "quantitative_observations": 23,
+    "unique_mutations": 16,
+    "double_mutant_combinations": 8
+  }
+}

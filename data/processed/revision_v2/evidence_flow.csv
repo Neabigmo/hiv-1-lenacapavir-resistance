@@ -1,0 +1,14 @@
+stage,step,count
+Identification,PubMed search,82
+Identification,Additional sources,5
+Identification,Total identified,87
+Screening,After deduplication,78
+Screening,Title/abstract screened,78
+Screening,Excluded (not relevant),-56
+Screening,Full-text assessed,22
+Eligibility,Full-text assessed,22
+Eligibility,Excluded (no quant data),-8
+Eligibility,Excluded (HIV-2 only),-3
+Eligibility,Included studies,11
+Included,Studies in synthesis,11
+Included,Quantitative observations,23

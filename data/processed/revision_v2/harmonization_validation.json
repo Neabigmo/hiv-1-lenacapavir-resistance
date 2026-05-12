@@ -1,0 +1,20 @@
+{
+  "total_observations": 26,
+  "complete_observations": 23,
+  "unique_mutations": 19,
+  "unique_studies": 11,
+  "quality_distribution": {
+    "3.0": 16,
+    "5.0": 7,
+    "4.0": 3
+  },
+  "context_distribution": {
+    "in_vitro": 19,
+    "clinical": 7
+  },
+  "issues": [
+    "Missing log10_FC: 3 observations",
+    "Invalid quality scores: 10 observations"
+  ],
+  "validation_passed": false
+}
