@@ -65,8 +65,8 @@ A systematic evidence synthesis and surveillance framework for clinical interpre
 ### Conda Environment
 
 ```bash
-conda create -n sw_mgli python=3.10
-conda activate sw_mgli
+conda create -n LEN python=3.10
+conda activate LEN
 pip install -r requirements.txt
 ```
 
