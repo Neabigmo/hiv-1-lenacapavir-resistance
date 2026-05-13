@@ -1,0 +1,10 @@
+% QC Criteria Table
+Quality metric & Minimum threshold & Pass criterion & Failure action \\
+\midrule
+Sequence length & $\geq$ 1500 nt (CA region) & Pass & Exclude from CA analysis \\
+Ambiguous nucleotide content & $\leq$ 5\% & Pass & Flag for review \\
+Coverage at RAM sites & $\geq$ 95\% & Pass & Exclude from RAM analysis \\
+Subtype confirmation & Confirmed by REGAs & Pass & Exclude from subtype analysis \\
+Duplicate exclusion & Unique patient identifier & Pass & Keep earliest sequence \\
+Collection date quality & Year $\geq$ 2000 & Pass & Exclude from temporal analysis \\
+Geographic precision & Country-level at minimum & Pass & Flag for regional analysis \\

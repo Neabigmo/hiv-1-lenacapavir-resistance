@@ -1,0 +1,17 @@
+Source,Mutation,FC,EC50,Context,Subtype,Quality,Notes,source_file,EC50_nM,Sample_Size,IC50,Prevalence,PDB_ID,Concentration,Measurement_Type,Value,Type,Infectivity_WT,Clinical_Context,Combination,Model,Synergy_Score,P_value,Interaction_Type,Count,Percentage,Parameter,Unit,Replication_Capacity,Infectivity_Percent_WT,Subtype_Prevalence,FC_numeric,log10_FC,outlier_flag,Subtype_original
+NATAP2022,Q67H,6.0,,In_vitro,B,3.0,Low-level resistance,natap2022_extracted_quantitative.csv,,,,,,,,,,,,,,,,,,,,,,,,6.0,0.7781512503836436,False,B
+PMC8092519,GCSMs_median,0.8,,In_vitro,Mixed,3.0,Treatment-naive isolates,pmc_extracted_batch1.csv,,15.0,,,,,,,,,,,,,,,,,,,,,,0.8,-0.0969100130080563,False,Mixed
+PMC8092519,SDM_GCSMs,1.0,,In_vitro,Mixed,3.0,Site-directed mutagenesis,pmc_extracted_batch1.csv,,19.0,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,False,Mixed
+PMC8092519,Multiclass_resistant,0.65,,In_vitro,Mixed,3.0,No cross-resistance,pmc_extracted_batch1.csv,,40.0,,,,,,,,,,,,,,,,,,,,,,0.65,-0.1870866433571444,False,Mixed
+PMC12077089,L56V,72.0,,In_vitro,Mixed,3.0,Steric clash with di-fluoro-benzyl,pmc_extracted_batch1.csv,,10057.0,,,,,,,,,,,,,,,,,,,,,,72.0,1.8573324964312683,False,Mixed
+PMC12077089,N57H,4890.0,,In_vitro,Mixed,3.0,H-bond loss,pmc_extracted_batch1.csv,,10057.0,,,,,,,,,,,,,,,,,,,,,,4890.0,3.68930885912362,False,Mixed
+EMJ2025,Q67H,4.7,,Clinical,Mixed,3.0,One participant developed Q67H with 4.7-fold change,clinical_trials_2025_extracted.csv,,,,,,,,,,,,,,,,,,,,,,,,4.7,0.6720978579357175,False,Mixed
+Structural_2025,M66I,3200.0,444nM,In_vitro,B,3.0,KFA-027 vs M66I; >20-fold improvement over LEN,structural_mechanism_2025.csv,,,,,9N0V,,,,,,,,,,,,,,,,,,,3200.0,3.505149978319906,False,B
+PMID40231850,M66I,3200,,In_vitro,B,3.0,"Highest resistance, steric hindrance",web_search_extracted_2026.csv,,,,,,,,,,,,,,,,,,,,,,,,3200.0,3.505149978319906,False,Subtype_B
+PMC9600929,Q67H,5,,In_vitro,B,3.0,"Kd fold change, dissociation rate affected",web_search_extracted_2026.csv,,,,,,,,,,,,,,,,,,,,,,,,5.0,0.6989700043360189,False,Subtype_B
+PMC9600929,N74D,20,,In_vitro,B,3.0,"Kd fold change, both kon and koff affected",web_search_extracted_2026.csv,,,,,,,,,,,,,,,,,,,,,,,,20.0,1.3010299956639813,False,Subtype_B
+PMC9600929,Q67H+N74D,150,,In_vitro,B,3.0,Double mutant synergy,web_search_extracted_2026.csv,,,,,,,,,,,,,,,,,,,,,,,,150.0,2.1760912590556813,False,Subtype_B
+PMC9600929,Q67H+K70R,0.59,,In_vitro,B,3.0,1.7-fold improved potency with KFA-012,web_search_extracted_2026.csv,,,,,,,,,,,,,,,,,,,,,,,,0.59,-0.2291479883578558,False,Subtype_B
+PMC12077089,L56V,72.0,,In_vitro,CRF02_AG,3.0,Steric clash with di-fluoro-benzyl,supplementary_mutations_2026.csv,,,,,,,,,,,,,,,,,,,,,,,,72.0,1.8573324964312683,False,CRF02_AG
+PMC12077089,N57H,4890.0,,In_vitro,D,3.0,H-bond loss with LEN,supplementary_mutations_2026.csv,,,,,,,,,,,,,,,,,,,,,,,,4890.0,3.68930885912362,False,Subtype_D
+CAPELLA,M66I+N74D+A105T,1337.0,,Clinical,Mixed,3.0,Triple mutant with fitness restoration,supplementary_mutations_2026.csv,,,,,,,,,,,,,,,,,,,,,,,,1337.0,3.126131407261985,False,Mixed

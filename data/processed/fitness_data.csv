@@ -1,0 +1,13 @@
+Paper,Mutation,Type,Value,FC,Context,Notes,Source,source_file,Subtype,Measurement_Type,Fold_Change,Clinical_Context,Count,Percentage,Replication_Capacity,Infectivity_Percent_WT,Subtype_Prevalence,Infectivity_WT,Prevalence
+GLASGOW,Q67N,Fitness,Least_impact,,In_vitro,Explains emergence,Selection,additional_studies_extracted,,,,,,,,,,,
+PMC12077089_full,L56_variants,Infectivity,2.8%,,In_vitro,Mean infectivity,PMC12077089,pmc12077089_full_fitness_data,Mixed,,,,,,,,,2.8%,
+PMC12077089_full,T54_variants,Infectivity,37%,,In_vitro,Mean infectivity,PMC12077089,pmc12077089_full_fitness_data,Mixed,,,,,,,,,37%,
+PMC12077089_full,S41_variants,Infectivity,42%,,In_vitro,Mean infectivity,PMC12077089,pmc12077089_full_fitness_data,Mixed,,,,,,,,,42%,
+PMC12077089_full,N183_variants,Infectivity,94%,,In_vitro,Mean infectivity,PMC12077089,pmc12077089_full_fitness_data,Mixed,,,,,,,,,94%,
+PMC12077089_full,Polymorphisms_overall,Infectivity,74%_impaired,,In_vitro,40/54 variants impaired,PMC12077089,pmc12077089_full_fitness_data,Mixed,,,,,,,,,,
+PMC9600929,Q67H,Fitness,WT-level,1.0,In_vitro,No detectable replication defect,Link_2022,pmc9600929_structural_mechanistic_data,,,,,,,,,,,
+PMC9600929,L56I,Fitness,Compromised,,In_vitro,Impaired replication,Link_2022,pmc9600929_structural_mechanistic_data,,,,,,,,,,,
+PMC9600929,Q67H/N74S,Fitness,Compromised,,In_vitro,Impaired replication,Link_2022,pmc9600929_structural_mechanistic_data,,,,,,,,,,,
+PMC9600929,Q67H/T107N,Fitness,Compromised,,In_vitro,Impaired replication,Link_2022,pmc9600929_structural_mechanistic_data,,,,,,,,,,,
+,Polymorphic,Infectivity_impaired,74%,,Natural,40/54 variants,PMC12077089,evidence_atlas_v2,,,,,,,,,,,
+,Multi_RAMs,Replication,Severely_impaired,,Clinical,MT-2 fails,PMC11995365,evidence_atlas_v2,,,,,,,,,,,

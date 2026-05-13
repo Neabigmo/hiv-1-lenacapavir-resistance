@@ -1,0 +1,10 @@
+Phase 2 Data Integration Summary
+Generated: 2026-04-22 13:46:31.736179
+
+total_records: 4546
+unique_mutations: 1135
+unique_subtypes: 36
+unique_sources: 0
+fc_range: (nan, nan)
+context_distribution: {'In_vitro': 2222, 'Clinical': 1688, 'Natural': 570, 'PK': 24, 'Longitudinal': 23, 'Fitness': 5, 'Mechanism': 3, 'Summary': 3, 'Binding': 3, 'Assembly': 2, 'Structural': 2, 'DDI': 1}
+subtype_distribution: {'B': 1087, 'A': 480, 'A1': 479, 'C': 380, 'D': 329, 'A2': 252, 'F': 205, 'E': 202, 'F1': 202, 'F2': 202, 'Mixed': 66, 'CRF01_AE': 51, 'CRF02_AG': 51, 'G': 50, 'CRF06_cpx': 50, 'H': 40, 'J': 40, 'K': 40, 'CRF07_BC': 40, 'CRF08_BC': 40, 'CRF11_cpx': 40, 'CRF12_BF': 40, 'CRF13_cpx': 40, 'CRF14_BG': 40, 'CRF18_cpx': 40, 'CRF19_cpx': 40, 'Subtype_B': 5, 'HIV-2': 4, 'A1/D': 4, 'A/B/C/D/G/H': 1, 'CRF45_cpx': 1, 'Overall': 1, 'Group_M': 1, 'Group_N': 1, 'Group_O': 1, 'Subtype_D': 1}

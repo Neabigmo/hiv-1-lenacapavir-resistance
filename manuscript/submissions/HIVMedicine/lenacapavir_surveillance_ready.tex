@@ -1,0 +1,605 @@
+% =============================================================================
+% HIV Medicine Journal Manuscript
+% Global readiness for HIV-1 capsid inhibitor resistance surveillance
+% in the lenacapavir PrEP era
+% =============================================================================
+% Compile with: XeLaTeX
+% =============================================================================
+
+\documentclass[12pt]{article}
+
+% =============================================================================
+% PACKAGE IMPORTS
+% =============================================================================
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{siunitx}
+\usepackage{endnotes}
+\usepackage{etoolbox}
+\usepackage{xstring}
+\usepackage{lineno}
+
+% =============================================================================
+% FONT CONFIGURATION (XeLaTeX)
+% =============================================================================
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+
+% =============================================================================
+% PAGE GEOMETRY
+% =============================================================================
+\geometry{
+    a4paper,
+    top=2.5cm,
+    bottom=2.5cm,
+    left=2.5cm,
+    right=2.5cm,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+
+% =============================================================================
+% LINE NUMBERING
+% =============================================================================
+\modulolinenumbers[5]
+\linenumbers
+\rightlinenumbers
+
+% =============================================================================
+% METADATA (loaded after font config)
+% =============================================================================
+\input{title_metadata.tex}
+
+% =============================================================================
+% HYPERREF CONFIGURATION
+% =============================================================================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    filecolor=magenta,
+    pdftitle={Lenacapavir Resistance Surveillance Readiness},
+    pdfauthor={Author et al.},
+    pdfsubject={HIV-1 Capsid Inhibitor Resistance Surveillance},
+    breaklinks=true
+}
+
+% =============================================================================
+% CUSTOM COMMANDS - EVIDENCE GRADING SYSTEM
+% =============================================================================
+% Evidence grading levels (WHO-style)
+\newcommand{\GradeHigh}{\textsuperscript{\textsf{[HIGH]}}}
+\newcommand{\GradeModerate}{\textsuperscript{\textsf{[MOD]}}}
+\newcommand{\GradeLow}{\textsuperscript{\textsf{[LOW]}}}
+\newcommand{\GradeVeryLow}{\textsuperscript{\textsf{[VLOW]}}}
+
+% Certainty of evidence
+\newcommand{\CoEHigh}{\textbf{Certainty of evidence: High}}
+\newcommand{\CoEModerate}{\textbf{Certainty of evidence: Moderate}}
+\newcommand{\CoELow}{\textbf{Certainty of evidence: Low}}
+\newcommand{\CoEVeryLow}{\textbf{Certainty of evidence: Very Low}}
+
+% Recommendation strength
+\newcommand{\RecStrong}{\textbf{Strong recommendation}}
+\newcommand{\RecConditional}{\textbf{Conditional recommendation}}
+\newcommand{\RecWeak}{\textbf{Weak recommendation}}
+
+% Quality markers
+\newcommand{\QCPass}{\checkmark\space}
+\newcommand{\QCFail}{\texttimes\space}
+\newcommand{\QCWarning}{\thorn\space}
+
+% =============================================================================
+% CUSTOM COMMANDS - METRICS AND ABBREVIATIONS
+% =============================================================================
+\newcommand{\LEN}{lenacapavir\xspace}
+\newcommand{\CA}{capsid\xspace}
+\newcommand{\PR}{protease\xspace}
+\newcommand{\RT}{reverse transcriptase\xspace}
+\newcommand{\RAM}{resistance-associated mutation\xspace}
+\newcommand{\RAMs}{resistance-associated mutations\xspace}
+%\renewcommand{\PrEP}{PrEP\xspace}  % Uncomment if needed
+
+% CIR-SRI Score components
+\newcommand{\CSO}[1]{\text{CSO}_{#1}}
+\newcommand{\ROS}[1]{\text{ROS}_{#1}}
+\newcommand{\CIRSRI}{\text{CIR-SRI}\index{CIR-SRI}\index{Composite Index of Readiness--Surveillance Readiness Index}}
+\newcommand{\GSS}{\text{GSS}\index{GSS}\index{Global Sequence Score}}
+
+% Number formatting
+\sisetup{
+    round-mode=places,
+    round-precision=2,
+    scientific-notation=false
+}
+
+% =============================================================================
+% CUSTOM COMMANDS - PLACEHOLDER DATA
+% =============================================================================
+% Placeholder for sequence counts
+\newcommand{\TotalSeqPRRT}{\textcolor{red}{[N\_PRRT]}}
+\newcommand{\TotalSeqCA}{\textcolor{red}{[N\_CA]}}
+%\addtocounter{totalSeqCA}{1}  % Synonym for TotalSeqCA
+%\@namedef{totalSeqCA}{\TotalSeqCA}  % lowercase version
+
+% Placeholder synonyms for case-insensitive matching
+\makeatletter
+\newcommand{\totalSeqPRRT}{\TotalSeqPRRT}
+\let\totalseqCA\TotalSeqCA  % backwards compatibility
+\makeatother
+
+% Placeholder for percentages
+\newcommand{\CSOPct}{\textcolor{red}{[XX.X]\%}}
+\newcommand{\ROSPct}{\textcolor{red}{[XX.X]\%}}
+\newcommand{\RAMFreq}{\textcolor{red}{[X.XX]\%}}
+
+% Placeholder for regional data
+\newcommand{\RegCSO}[1]{\textcolor{red}{[CSO\_#1]}}
+\newcommand{\RegROS}[1]{\textcolor{red}{[ROS\_#1]}}
+\newcommand{\RegPop}[1]{\textcolor{red}{[Pop\_#1]}}
+
+% Placeholder for scores
+\newcommand{\CIRSRIOverall}{\textcolor{red}{[X.XX]}}
+\newcommand{\ReadinessScore}[1]{\textcolor{red}{[#1]}}
+
+% =============================================================================
+% TITLE PAGE MACROS
+% =============================================================================
+\title{Global readiness for HIV-1 capsid inhibitor resistance surveillance in the lenacapavir PrEP era}
+
+% =============================================================================
+% DOCUMENT BEGIN
+% =============================================================================
+\begin{document}
+
+% Disable line numbers for title page
+nolinenumbers
+
+% =============================================================================
+% TITLE PAGE
+% =============================================================================
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+
+    {\LARGE\bfseries
+    Global readiness for HIV-1 capsid inhibitor resistance surveillance in the lenacapavir PrEP era
+    \par}
+
+    \vspace{2cm}
+
+    \large
+    \textbf{Author List}\GradeModerate \\[0.5cm]
+    {\small
+    \input{authors.tex}
+    \par}
+
+    \vspace{1.5cm}
+
+    {\small
+    \input{affiliations.tex}
+    \par}
+
+    \vspace{2cm}
+
+    {\small
+    \textbf{Corresponding Author:} \\
+    \input{corresponding.tex}
+    \par}
+
+    \vspace{1cm}
+
+    {\small
+    \textbf{Word Count:} \TotalWords (excluding abstract, references, tables, figures) \\
+    \textbf{Abstract Word Count:} \AbstractWords \\
+    \textbf{Number of Tables:} \NumTables \\
+    \textbf{Number of Figures:} \NumFigures \\
+    \textbf{Running Head:} LEN resistance surveillance readiness
+    \par}
+
+    \vspace{1cm}
+
+    {\small
+    \textbf{Conflicts of Interest:} \input{conflicts.tex} \\
+    \textbf{Funding:} \input{funding.tex}
+    \par}
+
+    \pagebreak
+\end{titlepage}
+
+% =============================================================================
+% ABSTRACT PAGE
+% =============================================================================
+\newpage
+\section*{Abstract}\GradeModerate
+
+\subsection*{Background}
+\input abstract_background.tex
+
+\subsection*{Methods}
+\input abstract_methods.tex
+
+\subsection*{Results}
+\input abstract_results.tex
+
+\subsection*{Conclusions}
+\input abstract_conclusions.tex
+
+\vspace{0.5cm}
+\noindent\textbf{Keywords:} \input keywords.tex
+
+\pagebreak
+
+% Re-enable line numbers
+\linenumbers
+
+% =============================================================================
+% INTRODUCTION
+% =============================================================================
+\section{Introduction}\label{sec:introduction}\GradeModerate
+
+\input intro_context.tex
+
+\input intro_len_era.tex
+
+\input intro_surveillance_gap.tex
+
+\input intro_objectives.tex
+
+% =============================================================================
+% MATERIALS AND METHODS
+% =============================================================================
+\section{Materials and Methods}\label{sec:methods}\GradeModerate
+
+% -----------------------------------------------------------------------------
+% 2.1 Data Sources
+% -----------------------------------------------------------------------------
+\subsection{Data Sources}\label{sec:data_sources}\GradeModerate
+
+\subsubsection{LANL HIV Sequence Database}\label{sec:lanl}
+\input methods_lanl.tex
+
+\subsubsection{GenBank Public Repository}\label{sec:genbank}
+\input methods_genbank.tex
+
+% -----------------------------------------------------------------------------
+% 2.2 RAM Target Dictionary Construction
+% -----------------------------------------------------------------------------
+\subsection{RAM Target Dictionary Construction}\label{sec:ram_dict}\GradeModerate
+
+\input methods_ram_definition.tex
+
+\begin{longtable}{p{2cm}p{3cm}p{3cm}p{2cm}p{4cm}}
+    \caption{Revised resistance mutations (RAMs) at the lenacapavir target site.
+    RAMs with \textbf{bold} font indicate high-confidence targets.}\label{tab:ram_dictionary}\\
+    \toprule
+    \textbf{Codon} & \textbf{Amino Acid Change} & \textbf{Resistance Level} & \textbf{Evidence} & \textbf{Notes} \\
+    \midrule
+    \endfirsthead
+    \toprule
+    \textbf{Codon} & \textbf{Amino Acid Change} & \textbf{Resistance Level} & \textbf{Evidence} & \textbf{Notes} \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endfoot
+    L56 & L56F & High & \textbf{Primary} & CA-HAP profiles \\
+    L56 & L56I & Moderate & Secondary & Tissue culture \\
+    N57 & N57D & High & \textbf{Primary} & CA-HAP profiles \\
+    N57 & N57H & Moderate & Secondary & Tissue culture \\
+    N57 & N57S & Low & Exploratory & Natural polymorphism \\
+    M66 & M66I & High & \textbf{Primary} & CA-HAP profiles \\
+    M66 & M66L & Moderate & Secondary & Tissue culture \\
+    Q67 & Q67H & Moderate & \textbf{Primary} & CA-HAP profiles \\
+    Q67 & Q67K & High & \textbf{Primary} & CA-HAP profiles \\
+    Q67 & Q67N & High & \textbf{Primary} & CA-HAP profiles \\
+    Q67 & Q67S & Low & Exploratory & Natural polymorphism \\
+    K70 & K70E & High & \textbf{Primary} & CA-HAP profiles \\
+    K70 & K70N & Moderate & Secondary & Tissue culture \\
+    K70 & K70R & Low & Exploratory & Natural polymorphism \\
+    N74 & N74D & High & \textbf{Primary} & CA-HAP profiles \\
+    N74 & N74S & Moderate & Secondary & Tissue culture \\
+    A105 & A105S & Moderate & \textbf{Primary} & CA-HAP profiles \\
+    A105 & A105T & Moderate & Secondary & Tissue culture \\
+    T107 & T107I & Moderate & \textbf{Primary} & CA-HAP profiles \\
+    T107 & T107N & Moderate & Secondary & Tissue culture \\
+    \bottomrule
+\end{longtable}
+
+% -----------------------------------------------------------------------------
+% 2.3 Sequence QC Pipeline
+% -----------------------------------------------------------------------------
+\subsection{Sequence QC Pipeline}\label{sec:qc_pipeline}\GradeModerate
+
+\input methods_qc.tex
+
+\begin{longtable}{p{3cm}p{4cm}p{4cm}p{4cm}}
+    \caption{Sequence quality control criteria and thresholds.}\label{tab:qc_criteria}\\
+    \toprule
+    \textbf{Criterion} & \textbf{Threshold} & \textbf{Rationale} & \textbf{Reference} \\
+    \midrule
+    \endfirsthead
+    \toprule
+    \textbf{Criterion} & \textbf{Threshold} & \textbf{Rationale} & \textbf{Reference} \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endfoot
+    Sequence length & $\geq$ 1500 nt (CA region) & Pass & Exclude from CA analysis \\
+    Ambiguous nucleotide content & $\leq$ 5\% & Pass & Flag for review \\
+    Coverage at RAM sites & $\geq$ 95\% & Pass & Exclude from RAM analysis \\
+    Subtype confirmation & Confirmed by REGAs & Pass & Exclude from subtype analysis \\
+    Duplicate exclusion & Unique patient identifier & Pass & Keep earliest sequence \\
+    Collection date quality & Year $\geq$ 2000 & Pass & Exclude from temporal analysis \\
+    Geographic precision & Country-level at minimum & Pass & Flag for regional analysis \\
+    \bottomrule
+\end{longtable}
+
+% -----------------------------------------------------------------------------
+% 2.4 CSO/ROS Calculation Methods
+% -----------------------------------------------------------------------------
+\subsection{Capsid Sequence Observability and Resistance Observability Score}\label{sec:cso_ros}\GradeModerate
+
+\input methods_cso.tex
+
+\input methods_ros.tex
+
+\begin{figure}[htbp]
+    \centering
+    \input{figures/cso_ros_flowchart.tex}
+    \caption[CSO and ROS calculation workflow]{Schematic representation of the
+    CSO and ROS calculation workflow. Sequences are classified into four
+    categories based on genomic coverage and RAM presence.}\label{fig:cso_ros_workflow}
+\end{figure}
+
+% -----------------------------------------------------------------------------
+% 2.5 CIR-SRI Construction
+% -----------------------------------------------------------------------------
+\subsection{Composite Index of Readiness--Surveillance Readiness Index}\label{sec:cir_sri}\GradeModerate
+
+\input methods_cir_sri.tex
+
+\begin{table}[htbp]
+    \centering
+    \caption{Dimensional framework for the CIR-SRI composite score.}\label{tab:cir_sri_framework}
+    \input{tables/cir_sri_framework.tex}
+\end{table}
+
+% -----------------------------------------------------------------------------
+% 2.6 Sensitivity Analysis
+% -----------------------------------------------------------------------------
+\subsection{Sensitivity Analysis}\label{sec:sensitivity}\GradeLow
+
+\input methods_sensitivity.tex
+
+% =============================================================================
+% RESULTS
+% =============================================================================
+\section{Results}\label{sec:results}
+
+% -----------------------------------------------------------------------------
+% 3.1 The Surveillance Gap
+% -----------------------------------------------------------------------------
+\subsection{Surveillance Gap from Lenacapavir PrEP Era}\label{sec:results_gap}\GradeModerate
+
+\input results_gap.tex
+
+\begin{table}[htbp]
+    \centering
+    \caption{HIV-1 sequence coverage by genomic region and data source.}\label{tab:sequence_coverage}
+    \input{tables/sequence_coverage.tex}
+\end{table}
+
+% -----------------------------------------------------------------------------
+% 3.2 Global Capsid Sequence Observability
+% -----------------------------------------------------------------------------
+\subsection{Global Capsid Sequence Observability}\label{sec:results_cso}\GradeModerate
+
+\input results_cso.tex
+
+\begin{figure}[htbp]
+    \centering
+    \input{figures/global_cso_map.tex}
+    \caption[Global CSO distribution]{Geographic distribution of capsid
+    sequence observability (CSO) scores across WHO regions. Panel A shows
+    mean CSO by country; Panel B shows CSO by income classification.}\label{fig:global_cso}
+\end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \caption{CSO scores by WHO region and country income classification.}\label{tab:cso_by_region}
+    \input{tables/cso_by_region.tex}
+\end{table}
+
+% -----------------------------------------------------------------------------
+% 3.3 LEN RAM-Site Observability
+% -----------------------------------------------------------------------------
+\subsection{Lenacapavir RAM-Site Observability}\label{sec:results_ram_site}\GradeModerate
+
+\input results_ram_site.tex
+
+\begin{figure}[htbp]
+    \centering
+    \input{figures/ram_site_coverage.tex}
+    \caption[RAM-site coverage by codon position]{Coverage of lenacapavir
+    RAM target codons across sequence datasets. Codons with coverage
+    \textless\ 50\% are highlighted in red.}\label{fig:ram_coverage}
+\end{figure}
+
+% -----------------------------------------------------------------------------
+% 3.4 Baseline Natural RAM Occurrence
+% -----------------------------------------------------------------------------
+\subsection{Baseline Natural RAM Occurrence}\label{sec:results_baseline}\GradeModerate
+
+\input results_baseline.tex
+
+\begin{table}[htbp]
+    \centering
+    \caption{Baseline polymorphism frequencies at LEN RAM sites in
+    treatment-na\"ive populations.}\label{tab:baseline_ram}
+    \input{tables/baseline_ram.tex}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \input{figures/ram_phylogeny.tex}
+    \caption[Phylogenetic distribution of RAMs]{Maximum likelihood phylogeny
+    showing the distribution of RAMs across HIV-1 subtypes and circulating
+    recombinant forms.}\label{fig:phylogeny}
+\end{figure}
+
+% -----------------------------------------------------------------------------
+% 3.5 CIR-SRI Priority Map
+% -----------------------------------------------------------------------------
+\subsection{Composite Index of Readiness--Surveillance Readiness Index Priority Map}\label{sec:results_cir_sri}\GradeModerate
+
+\input results_cir_sri.tex
+
+\begin{figure}[htbp]
+    \centering
+    \input{figures/cir_sri_heatmap.tex}
+    \caption[CIR-SRI priority heatmap]{Composite Index of Readiness--
+    Surveillance Readiness Index (CIR-SRI) heatmap by WHO region and
+    priority dimension. Red indicates critical gaps; green indicates
+    adequate readiness.}\label{fig:cir_sri_heatmap}
+\end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \caption{CIR-SRI component scores and overall readiness by country.}\label{tab:cir_sri_scores}
+    \input{tables/cir_sri_scores.tex}
+\end{table}
+
+% =============================================================================
+% DISCUSSION
+% =============================================================================
+\section{Discussion}\label{sec:discussion}
+
+% -----------------------------------------------------------------------------
+% 4.1 The System Blind Spot
+% -----------------------------------------------------------------------------
+\subsection{Understanding the Surveillance Blind Spot}\label{sec:discussion_blindspot}\GradeModerate
+
+\input discussion_blindspot.tex
+
+% -----------------------------------------------------------------------------
+% 4.2 Risk ≠ Panic
+% -----------------------------------------------------------------------------
+\subsection{Risk Characterization: Signal vs. Noise}\label{sec:discussion_risk}\GradeLow
+
+\input discussion_risk.tex
+
+% -----------------------------------------------------------------------------
+% 4.3 Public Health Value
+% -----------------------------------------------------------------------------
+\subsection{Public Health Implementation Value}\label{sec:discussion_phv}\GradeModerate
+
+\input discussion_phv.tex
+
+% -----------------------------------------------------------------------------
+% 4.4 Future Validation
+% -----------------------------------------------------------------------------
+\subsection{Future Validation Requirements}\label{sec:discussion_future}\GradeLow
+
+\input discussion_future.tex
+
+% =============================================================================
+% CONCLUSIONS
+% =============================================================================
+\section{Conclusions}\label{sec:conclusions}\GradeModerate
+
+\input conclusions.tex
+
+% =============================================================================
+% ACKNOWLEDGEMENTS
+% =============================================================================
+\section*{Acknowledgements}\label{sec:acknowledgements}
+
+\input acknowledgements.tex
+
+% =============================================================================
+% REFERENCES
+% =============================================================================
+% Disable line numbers for references
+\nolinenumbers
+
+\section*{References}\label{sec:references}
+\input{references.tex}
+
+% =============================================================================
+% SUPPLEMENTARY MATERIALS
+% =============================================================================
+\newpage
+\section*{Supplementary Materials}\label{sec:supplementary}
+\input{supplementary/supp_methods.tex}
+
+% =============================================================================
+% TABLES
+% =============================================================================
+\clearpage
+\section*{Tables}\label{sec:tables}
+\addcontentsline{toc}{section}{Tables}
+
+% Tables are included inline above. This section reserved for oversized tables.
+
+% =============================================================================
+% FIGURE LEGENDS
+% =============================================================================
+\clearpage
+\section*{Figure Legends}\label{sec:figure_legends}
+\addcontentsline{toc}{section}{Figure Legends}
+
+\begin{enumerate}
+    \item \textbf{Figure S1:} Full workflow schematic of the sequence processing
+    pipeline from raw database retrieval to CIR-SRI calculation.
+
+    \item \textbf{Figure S2:} Sensitivity analysis showing CIR-SRI stability
+    across varying QC stringency thresholds.
+
+    \item \textbf{Figure S3:} Temporal trends in PR/RT sequence submissions
+    to LANL and GenBank (2015--2024).
+
+    \item \textbf{Figure S4:} Subtype distribution of sequences with complete
+    CA coverage versus PR/RT-only sequences.
+
+    \item \textbf{Figure S5:} RAM frequency heatmap by geographic region and
+    HIV-1 subtype.
+\end{enumerate}
+
+% =============================================================================
+% APPENDIX
+% =============================================================================
+\clearpage
+\appendix
+\section*{Appendix}\label{sec:appendix}
+
+\subsection*{A. RAM Site Coordinates and Nucleotide Positions}
+\input appendix_ram_coords.tex
+
+\subsection*{B. CIR-SRI Calculation Formulae}
+\input appendix_cir_sri_formulae.tex
+
+\subsection*{C. Sensitivity Analysis Parameters}
+\input appendix_sensitivity.tex
+
+% =============================================================================
+% ENDNOTES
+% =============================================================================
+\clearpage
+\section*{Endnotes}\label{sec:endnotes}
+\addcontentsline{toc}{section}{Endnotes}
+\theendnotes
+
+% =============================================================================
+% DOCUMENT END
+% =============================================================================
+\end{document}

@@ -1,0 +1,5 @@
+Source,Mutation,FC,EC50,Context,Subtype,Quality,Notes,source_file,EC50_nM,Sample_Size,IC50,Prevalence,PDB_ID,Concentration,Measurement_Type,Value,Type,Infectivity_WT,Clinical_Context,Combination,Model,Synergy_Score,P_value,Interaction_Type,Count,Percentage,Parameter,Unit,Replication_Capacity,Infectivity_Percent_WT,Subtype_Prevalence,FC_numeric,log10_FC,outlier_flag
+NATAP2022,WT,,885pmol/l,In_vitro,HIV-2,3.0,HIV-2 isolates,natap2022_extracted_quantitative.csv,,,,,,,,,,,,,,,,,,,,,,,,,,False
+HIV2_CID2025,N73D,30.0,,Clinical,HIV-2,3.0,IC50 from 1.25nM to 37.62nM,multi_source_batch_2026.csv,,8.0,37.62nM,,,,,,,,,,,,,,,,,,,,,30.0,1.4771212547196624,False
+HIV2_CID2025,Q66H+R69K,,,Clinical,HIV-2,3.0,Emerged in 1 patient,multi_source_batch_2026.csv,,8.0,,,,,,,,,,,,,,,,,,,,,,,,False
+HIV2_CID2025,N73D+A76V,,,Clinical,HIV-2,3.0,Secondary mutation at 12-17 months,multi_source_batch_2026.csv,,8.0,,,,,,,,,,,,,,,,,,,,,,,,False

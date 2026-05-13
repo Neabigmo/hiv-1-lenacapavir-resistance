@@ -1,0 +1,185 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\geometry{margin=1in}
+
+\title{Supplementary Materials:\\Evidence-Based Interpretation Framework for Lenacapavir Resistance}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent\textbf{Contents:}
+\begin{enumerate}
+  \item Figure S1. Data Harmonization Workflow
+  \item Figure S2. Observation Counts by Mutation and Context
+  \item Figure S3. Bootstrap Ranking Stability
+  \item Figure S4. Expanded Structural Classification by Mechanism
+  \item Figure S5. Full Interaction Network
+  \item Figure S6. Validation Roadmap
+  \item Figure S7. Sensitivity Analysis of Mutation Ranking Stability
+  \item Table S2. Genetic Barrier Scores
+  \item Table S3. Study Characteristics
+  \item Table S4. Per-Mutation Summary Statistics
+  \item Table S5. Complete Harmonized Phenotype Dataset
+  \item Table S6. Multi-Mutant Phenotypic Observations
+\end{enumerate}
+
+\newpage
+
+% ============================================================
+% FIGURE S1
+% ============================================================
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\textwidth]{supplementary/figures/figure_s1_harmonization.pdf}
+\caption{\textbf{Data Harmonization Workflow.}
+Schematic diagram showing the six-step pipeline for data extraction, context classification, fold-change harmonization, quality filtering, subtype stratification, and pooled estimate generation. Clinical context (patient-derived sequences with resistance phenotypes), in vitro context (laboratory-selected or site-directed mutants), and natural polymorphism context (baseline surveillance data) are distinguished. FC = EC$_{50}$ fold-change vs wild-type susceptibility (higher values indicate greater resistance).}
+\label{fig:s1}
+\end{figure}
+
+\newpage
+
+% ============================================================
+% FIGURE S2
+% ============================================================
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.85\textwidth]{supplementary/figures/figure_s2_observation_counts.pdf}
+\caption{\textbf{Observation Counts by Mutation and Context.}
+Stacked bar chart showing the number of observations for each mutation stratified by context tier (clinical, in vitro, natural polymorphism). Mutation labels are shown on the y-axis.}
+\label{fig:s2}
+\end{figure}
+
+\newpage
+
+% ============================================================
+% FIGURE S3
+% ============================================================
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.9\textwidth]{supplementary/figures/figure_s3_bootstrap.pdf}
+\caption{\textbf{Bootstrap Ranking Stability.}
+Cleveland dot plot showing mean bootstrap rank ($\pm$ standard deviation) for 8 key mutations across 1,000 resamplings. Lower rank indicates higher resistance. N57H and M66I show the most stable top rankings (mean ranks 1.0 and 1.9, respectively).}
+\label{fig:s3}
+\end{figure}
+
+\newpage
+
+% ============================================================
+% FIGURE S4
+% ============================================================
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\textwidth]{supplementary/figures/figure_s4_structural.pdf}
+\caption{\textbf{Expanded Structural Classification by Mechanism.}
+Six-panel visualization showing mutation groupings by mechanistic class: H-bond disruption (N57H), steric hindrance (M66I), conformational (Q67H, N74D), electrostatic (K70R), compensatory (A105T, T107A), and combination (Q67H+K70R, M66I+A105T). Each panel includes mechanism description.}
+\label{fig:s4}
+\end{figure}
+
+\newpage
+
+% ============================================================
+% FIGURE S5
+% ============================================================
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.85\textwidth]{supplementary/figures/figure_s5_network.pdf}
+\caption{\textbf{Full Interaction Network.}
+Network graph visualization of epistatic interactions among LEN resistance mutations. Single mutations are shown as smaller blue-gray nodes; combination mutations as larger red nodes. Edge types indicate: solid = synergy, dashed = compensatory, thin = indirect interaction.}
+\label{fig:s5}
+\end{figure}
+
+\newpage
+
+% ============================================================
+% FIGURE S6
+% ============================================================
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8\textwidth]{supplementary/figures/figure_s6_roadmap.pdf}
+\caption{\textbf{Validation Roadmap.}
+Prioritized next steps for expanding the evidence base, including estimated feasibility and required sample sizes for quantifying subtype contribution beyond mutation-level effects.}
+\label{fig:s6}
+\end{figure}
+
+\newpage
+
+% ============================================================
+% FIGURE S7
+% ============================================================
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\textwidth]{supplementary/figures/figure_s7_sensitivity.pdf}
+\caption{\textbf{Sensitivity Analysis of Mutation Ranking Stability.}
+Cleveland dot plots showing mean rank ($\pm$ SD) for mutations across three data perturbations: (left) full dataset (baseline), (center) removing single-observation mutations, (right) subtype B only. N57H and M66I remain the top-ranked mutations under all perturbations, supporting ranking robustness.}
+\label{fig:s7}
+\end{figure}
+
+\newpage
+
+% ============================================================
+% TABLE S2
+% ============================================================
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Genetic Barrier Scores for LEN Resistance-Associated Mutations.}}
+\label{tab:s2}
+\vspace{0.3cm}
+\input{supplementary/table_s2.tex}
+\end{table}
+
+\newpage
+
+% ============================================================
+% TABLE S3
+% ============================================================
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Study Characteristics of Included Publications ($n=7$).}}
+\label{tab:s3}
+\vspace{0.3cm}
+\input{supplementary/tables/table_s3_studies.tex}
+\end{table}
+
+\newpage
+
+% ============================================================
+% TABLE S4
+% ============================================================
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Per-Mutation Summary Statistics of Phenotypic Observations.}}
+\label{tab:s4}
+\vspace{0.3cm}
+\input{supplementary/tables/table_s4_summary.tex}
+\end{table}
+
+\newpage
+
+% ============================================================
+% TABLE S5
+% ============================================================
+\input{supplementary/tables/table_s5_phenotypes.tex}
+
+\newpage
+
+% ============================================================
+% TABLE S6
+% ============================================================
+\begin{table}[!ht]
+\centering
+\caption{\textbf{Multi-Mutant Phenotypic Observations.}}
+\label{tab:s6}
+\vspace{0.3cm}
+\input{supplementary/tables/table_s6_double_mutants.tex}
+\end{table}
+
+\end{document}

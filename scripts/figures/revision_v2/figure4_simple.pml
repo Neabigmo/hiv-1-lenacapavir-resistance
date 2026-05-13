@@ -1,0 +1,97 @@
+#!/usr/bin/env pymol
+# Figure 4: Binding Site Detail
+# Order: 1.gray 2.mutations 3.ligand YELLOW
+
+reinitialize
+fetch 6vkv, async=0
+remove solvent
+hide everything
+
+# ===== 1. BASE: Chain A cartoon - gray =====
+show cartoon, chain A
+color gray85, chain A
+set cartoon_fancy_sheets, 1
+
+# ===== 2. Surface - gray =====
+show surface, chain A
+set transparency, 0.6
+color gray85, chain A
+
+# ===== 3. POCKET - only chain A atoms, GRAY =====
+# Select chain A residues that contact ligand (within 5A of chain A near QNG)
+select pocket, byres (chain A within 5 of (chain A around 6 and resn QNG))
+# This selects chain A residues near where ligand would be
+
+# Actually, let's be more explicit - only chain A backbone near binding site
+select pocket_main, chain A and resid 55-75
+show sticks, pocket_main
+color gray85, pocket_main
+set stick_radius, 0.12
+
+# ===== 4. MUTATIONS - colored spheres =====
+# Green = 57, Red = 66, Orange = 67, Blue = 74, Cyan = 105, lightblue = 107
+
+select m57, resid 57 and name CA
+show spheres, m57
+color green, m57
+set sphere_scale, 0.6
+
+select m66, resid 66 and name CA
+show spheres, m66
+color red, m66
+set sphere_scale, 0.6
+
+select m67, resid 67 and name CA
+show spheres, m67
+color orange, m67
+set sphere_scale, 0.6
+
+select m74, resid 74 and name CA
+show spheres, m74
+color blue, m74
+set sphere_scale, 0.6
+
+select m105, resid 105 and name CA
+show spheres, m105
+color cyan, m105
+set sphere_scale, 0.6
+
+select m107, resid 107 and name CA
+show spheres, m107
+color lightblue, m107
+set sphere_scale, 0.6
+
+# ===== 5. LIGAND - ONLY resn QNG, YELLOW =====
+# Ligand is on chains D, L, R - select by residue name
+select ligand_only, resn QNG
+
+# Show as sticks and color yellow
+show sticks, ligand_only
+set stick_radius, 0.25
+set valence, 0
+color yelloworange, ligand_only
+
+# ===== 6. H-BOND N57-N to ligand =====
+select n57_backbone, resid 57 and name N
+show spheres, n57_backbone
+color green, n57_backbone
+set sphere_scale, 0.3
+
+select ligand_oxy, resn QNG and elem O
+distance hb1, n57_backbone, ligand_oxy, 3.5
+set dash_color, green
+set dash_width, 10
+set dash_gap, 0
+set dash_radius, 0.06
+hide label, hb1
+
+# ===== 7. Settings =====
+bg_color white
+set ray_opaque_background, on
+set antialias, 2
+
+# ===== 8. Zoom =====
+zoom (chain A and resid 55-110), 5
+orient (chain A and resid 55-110)
+
+# TO SAVE: png figure4.png, width=2400, height=2400, ray=1

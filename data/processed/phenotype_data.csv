@@ -1,0 +1,79 @@
+Paper,Mutation,Type,Value,FC,Context,Notes,Source,source_file,Subtype,Measurement_Type,Fold_Change,Clinical_Context,Count,Percentage,Replication_Capacity,Infectivity_Percent_WT,Subtype_Prevalence,Infectivity_WT,Prevalence,FC_numeric,Backbone
+mBio2022,Q67H,Kd_FC,5,5.0,In_vitro,Binding affinity,mBio2022,backbone_annotated_phenotypes,Subtype_B,,,,,,,,,,,5.0,Subtype_B
+mBio2022,N74D,Kd_FC,20,20.0,In_vitro,Binding affinity,mBio2022,backbone_annotated_phenotypes,Subtype_B,,,,,,,,,,,20.0,Subtype_B
+mBio2022,Q67H/N74D,Kd_FC,150,150.0,In_vitro,Double mutant,mBio2022,backbone_annotated_phenotypes,Subtype_B,,,,,,,,,,,150.0,Subtype_B
+PMC12077089,L56V,EC50_FC,72,72.0,In_vitro,Steric clash,PMC12077089,backbone_annotated_phenotypes,CRF02_AG,,,,,,,,,,,72.0,CRF02_AG
+PMC12077089,N57H,EC50_FC,4890,4890.0,In_vitro,H-bond loss,PMC12077089,backbone_annotated_phenotypes,Subtype_D,,,,,,,,,,,4890.0,Subtype_D
+CAPELLA_2yr,M66I,Resistance,Emergent,,Clinical,Treatment-emergent,PMID39873394,capella_2year_resistance_data,,,,,,,,,,,,,Unknown
+CAPELLA_2yr,Q67H,Resistance,Emergent,,Clinical,Treatment-emergent,PMID39873394,capella_2year_resistance_data,,,,,,,,,,,,,Unknown
+CAPELLA_2yr,Q67K,Resistance,Emergent,,Clinical,Treatment-emergent,PMID39873394,capella_2year_resistance_data,,,,,,,,,,,,,Unknown
+CAPELLA_2yr,Q67N,Resistance,Emergent,,Clinical,Treatment-emergent,PMID39873394,capella_2year_resistance_data,,,,,,,,,,,,,Unknown
+CAPELLA_2yr,K70H,Resistance,Emergent,,Clinical,Treatment-emergent,PMID39873394,capella_2year_resistance_data,,,,,,,,,,,,,Unknown
+CAPELLA_2yr,K70N,Resistance,Emergent,,Clinical,Treatment-emergent,PMID39873394,capella_2year_resistance_data,,,,,,,,,,,,,Unknown
+CAPELLA_2yr,K70R,Resistance,Emergent,,Clinical,Treatment-emergent,PMID39873394,capella_2year_resistance_data,,,,,,,,,,,,,Unknown
+CAPELLA_2yr,K70S,Resistance,Emergent,,Clinical,Treatment-emergent,PMID39873394,capella_2year_resistance_data,,,,,,,,,,,,,Unknown
+CAPELLA_2yr,N74D,Resistance,Emergent,,Clinical,Treatment-emergent,PMID39873394,capella_2year_resistance_data,,,,,,,,,,,,,Unknown
+CAPELLA_2yr,N74H,Resistance,Emergent,,Clinical,Treatment-emergent,PMID39873394,capella_2year_resistance_data,,,,,,,,,,,,,Unknown
+CAPELLA_2yr,N74K,Resistance,Emergent,,Clinical,Treatment-emergent,PMID39873394,capella_2year_resistance_data,,,,,,,,,,,,,Unknown
+CAPELLA_2yr_JID,Q67H,Resistance,4.5-fold,4.5,Clinical,Participant 1,JID2025,capella_hiv2_clinical_isolates,Clinical_isolate,,,,,,,,,,,4.5,Clinical_isolate
+CAPELLA_2yr_JID,Q67Q/H,Resistance,5.9-fold,5.9,Clinical,Participant 2 mixed,JID2025,capella_hiv2_clinical_isolates,Clinical_isolate,,,,,,,,,,,5.9,Clinical_isolate
+CAPELLA_2yr_JID,M66M/I+Q67+K70K/R+T107T/C,Resistance,12.2-fold,12.2,Clinical,Participant 3 complex,JID2025,capella_hiv2_clinical_isolates,Clinical_isolate,,,,,,,,,,,12.2,Clinical_isolate
+CAPELLA_2yr_JID,N74D,Resistance,16-fold,16.0,Clinical,Participant 4,JID2025,capella_hiv2_clinical_isolates,Clinical_isolate,,,,,,,,,,,16.0,Clinical_isolate
+CAPELLA_2yr_JID,Q67H+K70R,Resistance,46.3-fold,46.3,Clinical,Participant 5,JID2025,capella_hiv2_clinical_isolates,Clinical_isolate,,,,,,,,,,,46.3,Clinical_isolate
+CAPELLA_2yr_JID,Q67H+K70R+A105A/T,Resistance,107-fold,107.0,Clinical,Participant 6,JID2025,capella_hiv2_clinical_isolates,Clinical_isolate,,,,,,,,,,,107.0,Clinical_isolate
+CAPELLA_2yr_JID,M66I+A105T,Resistance,111-fold,111.0,Clinical,Participant 7,JID2025,capella_hiv2_clinical_isolates,Clinical_isolate,,,,,,,,,,,111.0,Clinical_isolate
+CAPELLA_2yr_JID,Q67K+K70H,Resistance,167-fold,167.0,Clinical,Participant 8,JID2025,capella_hiv2_clinical_isolates,Clinical_isolate,,,,,,,,,,,167.0,Clinical_isolate
+CAPELLA_2yr_JID,M66I+T107A,Resistance,234-fold,234.0,Clinical,Participant 9,JID2025,capella_hiv2_clinical_isolates,Clinical_isolate,,,,,,,,,,,234.0,Clinical_isolate
+CAPELLA_2yr_JID,K70N+N74K,Resistance,289-fold,289.0,Clinical,Participant 11,JID2025,capella_hiv2_clinical_isolates,Clinical_isolate,,,,,,,,,,,289.0,Clinical_isolate
+CAPELLA_2yr_JID,Q67H+K70R+T107T/N,Resistance,393-fold,393.0,Clinical,Participant 12,JID2025,capella_hiv2_clinical_isolates,Clinical_isolate,,,,,,,,,,,393.0,Clinical_isolate
+CAPELLA_2yr_JID,M66I+N74D+A105T,Resistance,>869-fold,869.0,Clinical,Participant 13 triple,JID2025,capella_hiv2_clinical_isolates,Clinical_isolate,,,,,,,,,,,869.0,Clinical_isolate
+CAPELLA_2yr_JID,M66I+Q67Q/H+N74D+A105T,Resistance,>869-fold,869.0,Clinical,Participant 14 quad,JID2025,capella_hiv2_clinical_isolates,Clinical_isolate,,,,,,,,,,,869.0,Clinical_isolate
+HIV2_CID,N73D,Resistance,30-fold,30.0,Clinical,HIV-2 primary RAM,CID2024,capella_hiv2_clinical_isolates,HIV2,,,,,,,,,,,30.0,HIV2
+HIV2_CID,N73D+A76V,Resistance,High,,Clinical,Double mutant 2 patients,CID2024,capella_hiv2_clinical_isolates,HIV2,,,,,,,,,,,,HIV2
+HIV2_CID,Q66H+R69K,Resistance,Emergent,,Clinical,Single patient,CID2024,capella_hiv2_clinical_isolates,HIV2,,,,,,,,,,,,HIV2
+HIV2_CID,Q66H,Resistance,Emergent,,Clinical,Single patient,CID2024,capella_hiv2_clinical_isolates,HIV2,,,,,,,,,,,,HIV2
+Lenacapavir_WT,WT,EC50,105pM,1.0,In_vitro,MT-4 cells baseline,PMC10698746,lenacapavir_potency_data,,,,,,,,,,,,1.0,Unknown
+NATAP_review,L56I,Resistance,6-fold,6.0,In_vitro,Reduced susceptibility,NATAP2022,natap_review_data,,,,,,,,,,,,6.0,Unknown
+NATAP_review,M66I,Resistance,>3200-fold,3200.0,In_vitro,Highest resistance,NATAP2022,natap_review_data,,,,,,,,,,,,3200.0,Unknown
+NATAP_review,K70N,Resistance,6-fold,6.0,In_vitro,Reduced susceptibility,NATAP2022,natap_review_data,,,,,,,,,,,,6.0,Unknown
+NATAP_review,Q67H,Resistance,6-fold,6.0,In_vitro,Low-level resistance,NATAP2022,natap_review_data,,,,,,,,,,,,6.0,Unknown
+NATAP_review,Q67H/N74S,Resistance,Multiple,,In_vitro,Combination mutation,NATAP2022,natap_review_data,,,,,,,,,,,,,Unknown
+NATAP_review,Q67H/T107N,Resistance,Multiple,,In_vitro,Combination mutation,NATAP2022,natap_review_data,,,,,,,,,,,,,Unknown
+PMC12077089_full,L56V,EC50_FC,72,72.0,In_vitro,Steric clash,PMC12077089,pmc12077089_full_fitness_data,CRF02_AG,,,,,,,,,2.8%,,72.0,CRF02_AG
+PMC12077089_full,N57H,EC50_FC,4890,4890.0,In_vitro,H-bond loss,PMC12077089,pmc12077089_full_fitness_data,Subtype_D,,,,,,,,,,,4890.0,Subtype_D
+PMC12077089_full,Minimal_change_variants,Resistance,0.6-2.6,1.6,In_vitro,96% variants <3-fold,PMC12077089,pmc12077089_full_fitness_data,Mixed,,,,,,,,,,,1.6,Mixed
+PMC8092519,Q430R,Resistance,1.9-fold,1.9,In_vitro,PI-associated GCSM,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.9,Unknown
+PMC8092519,A431V,Resistance,1.9-fold,1.9,In_vitro,PI-associated GCSM prevalent,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.9,Unknown
+PMC8092519,K436E,Resistance,1.9-fold,1.9,In_vitro,PI-associated GCSM,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.9,Unknown
+PMC8092519,K436S,Resistance,1.9-fold,1.9,In_vitro,PI-associated GCSM,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.9,Unknown
+PMC8092519,I437T,Resistance,1.9-fold,1.9,In_vitro,PI-associated GCSM,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.9,Unknown
+PMC8092519,I437V,Resistance,1.9-fold,1.9,In_vitro,PI-associated GCSM,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.9,Unknown
+PMC8092519,L449H,Resistance,1.9-fold,1.9,In_vitro,PI-associated GCSM,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.9,Unknown
+PMC8092519,L449V,Resistance,1.9-fold,1.9,In_vitro,PI-associated GCSM,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.9,Unknown
+PMC8092519,L449F,Resistance,1.9-fold,1.9,In_vitro,PI-associated GCSM,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.9,Unknown
+PMC8092519,P453L,Resistance,1.9-fold,1.9,In_vitro,PI-associated GCSM prevalent,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.9,Unknown
+PMC8092519,L363F,Resistance,1.9-fold,1.9,In_vitro,MI-associated CA/SP1,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.9,Unknown
+PMC8092519,L363M,Resistance,1.9-fold,1.9,In_vitro,MI-associated CA/SP1,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.9,Unknown
+PMC8092519,A364V,Resistance,1.9-fold,1.9,In_vitro,MI-associated CA/SP1,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.9,Unknown
+PMC8092519,K436E+I437T,Resistance,1.6-fold,1.6,In_vitro,Double mutation highest FC,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,1.6,Unknown
+PMC8092519,TE_isolates,Resistance,0.8-fold,0.8,Clinical,Median FC in treatment-experienced,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,0.8,Unknown
+PMC8092519,Multiclass_resistant,Resistance,0.65-fold,0.65,Clinical,Average FC across 40 isolates,AAC_2021,pmc8092519_gcsm_data,,,,,,,,,,,,0.65,Unknown
+PMC9600929,Q67H/N74D,Resistance,Cumulative,,In_vitro,Double mutation synergy,Link_2022,pmc9600929_structural_mechanistic_data,,,,,,,,,,,,,Unknown
+PMC9600929,Q67H/K70R,EC50_KFA012,883pM,,In_vitro,KFA-012 analog,Link_2022,pmc9600929_structural_mechanistic_data,,,,,,,,,,,,,Unknown
+PMC9600929,Q67H/K70R,EC50_LEN,1498pM,,In_vitro,1.7-fold more potent with KFA-012,Link_2022,pmc9600929_structural_mechanistic_data,,,,,,,,,,,,,Unknown
+PMC9600929,M66I,Resistance,Complete,,In_vitro,Fully resistant to LEN and KFA-012,Link_2022,pmc9600929_structural_mechanistic_data,,,,,,,,,,,,,Unknown
+NATAP_review,L56I,Resistance,6-fold,6.0,In_vitro,Reduced susceptibility,NATAP2022,subtype_annotated_resistance,Subtype_B,,,,,,,,,,,6.0,Subtype_B
+NATAP_review,M66I,Resistance,>3200-fold,3200.0,In_vitro,Highest resistance,NATAP2022,subtype_annotated_resistance,Subtype_B,,,,,,,,,,,3200.0,Subtype_B
+NATAP_review,K70N,Resistance,6-fold,6.0,In_vitro,Reduced susceptibility,NATAP2022,subtype_annotated_resistance,Subtype_B,,,,,,,,,,,6.0,Subtype_B
+NATAP_review,Q67H,Resistance,6-fold,6.0,In_vitro,Low-level resistance,NATAP2022,subtype_annotated_resistance,Subtype_B,,,,,,,,,,,6.0,Subtype_B
+PMC8092519,K436E+I437T,Resistance,1.6-fold,1.6,In_vitro,Double mutation highest FC,AAC_2021,subtype_annotated_resistance,Subtype_B,,,,,,,,,,,1.6,Subtype_B
+PMC8092519,TE_isolates,Resistance,0.8-fold,0.8,Clinical,Median FC treatment-experienced,AAC_2021,subtype_annotated_resistance,Mixed_subtypes,,,,,,,,,,,0.8,Mixed_subtypes
+PMC8092519,Multiclass_resistant,Resistance,0.65-fold,0.65,Clinical,Average FC 40 isolates,AAC_2021,subtype_annotated_resistance,Mixed_subtypes,,,,,,,,,,,0.65,Mixed_subtypes
+Uganda_JAC,T107C+Q67H+K70R,Resistance,12.2-fold,12.2,In_vitro,Triple mutant,JAC2025,uganda_hiv2_quantitative,Subtype_B,,,,,,,,,,,12.2,Subtype_B
+Uganda_JAC,Q67H+K70R,Resistance,15-20-fold,17.5,In_vitro,Double mutant,JAC2025,uganda_hiv2_quantitative,Subtype_B,,,,,,,,,,,17.5,Subtype_B
+,Q67H,Kd_FC,5,5.0,In_vitro,Binding affinity,mBio2022,evidence_atlas_v2,,,,,,,,,,,,5.0,Unknown
+,N74D,Kd_FC,20,20.0,In_vitro,Binding affinity,mBio2022,evidence_atlas_v2,,,,,,,,,,,,20.0,Unknown
+,Q67H/N74D,Kd_FC,150,150.0,In_vitro,Double mutant,mBio2022,evidence_atlas_v2,,,,,,,,,,,,150.0,Unknown
+,M66I,Resistance,Complete,,In_vitro,Both LEN+KFA-012,mBio2022,evidence_atlas_v2,,,,,,,,,,,,,Unknown
+,L56V,EC50_FC,72,72.0,In_vitro,Steric clash,PMC12077089,evidence_atlas_v2,,,,,,,,,,,,72.0,Unknown
+,N57H,EC50_FC,4890,4890.0,In_vitro,H-bond loss,PMC12077089,evidence_atlas_v2,,,,,,,,,,,,4890.0,Unknown
