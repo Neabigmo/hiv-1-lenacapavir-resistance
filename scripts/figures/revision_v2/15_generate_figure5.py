@@ -190,28 +190,25 @@ def create_fitness_resistance(ax):
 
 
 def main():
-    """Generate Figure 5 - Evolution and fitness"""
+    """Generate Figure 5 - Evolutionary Constraints (2 panels for main, 3rd panel in supplement)"""
     print("="*60)
     print("Generating Figure 5: Evolutionary Constraints & Fitness")
     print("="*60)
 
-    fig = plt.figure(figsize=(16, 10))
-    gs = GridSpec(2, 2, figure=fig, height_ratios=[1.1, 1.0], hspace=0.5, wspace=0.35)
+    # Main figure: 2 panels (A and B only)
+    fig = plt.figure(figsize=(16, 7))
+    gs = GridSpec(1, 2, figure=fig, hspace=0.4, wspace=0.35)
 
-    ax1 = fig.add_subplot(gs[0, :])    # A: logo (full width)
-    ax2 = fig.add_subplot(gs[1, 0])    # B: subtype frequencies
-    ax3 = fig.add_subplot(gs[1, 1])    # C: fitness vs resistance
+    ax1 = fig.add_subplot(gs[0, 0])    # A: conservation (full width top)
+    ax2 = fig.add_subplot(gs[0, 1])    # B: subtype frequencies
 
-    print("\nPanel A: Sequence logo...")
+    print("\nPanel A: Conservation...")
     create_sequence_logo(ax1)
 
     print("Panel B: Subtype frequencies...")
     create_subtype_frequencies(ax2)
 
-    print("Panel C: Fitness vs resistance...")
-    create_fitness_resistance(ax3)
-
-    fig.subplots_adjust(hspace=0.5, wspace=0.35)
+    fig.subplots_adjust(hspace=0.4, wspace=0.35)
 
     output_pdf = OUTPUT_DIR / "figure5_evolution.pdf"
     output_png = OUTPUT_DIR / "figure5_evolution.png"
@@ -221,11 +218,28 @@ def main():
 
     print(f"\n[OK] Saved: {output_pdf}")
     print(f"[OK] Saved: {output_png}")
+
+    # Supplementary figure: Panel C (fitness vs resistance)
+    print("\nGenerating supplementary Figure S8: Fitness vs Resistance...")
+    fig_sup = plt.figure(figsize=(8, 6))
+    ax_sup = fig_sup.add_subplot(111)
+
+    create_fitness_resistance(ax_sup)
+
+    sup_pdf = OUTPUT_DIR / "figure_s8_fitness.pdf"
+    sup_png = OUTPUT_DIR / "figure_s8_fitness.png"
+
+    fig_sup.savefig(sup_pdf, dpi=300, bbox_inches='tight', pad_inches=0.3)
+    fig_sup.savefig(sup_png, dpi=300, bbox_inches='tight', pad_inches=0.3)
+
+    print(f"[OK] Saved: {sup_pdf}")
+    print(f"[OK] Saved: {sup_png}")
+
     print("\n" + "="*60)
-    print("Figure 5 complete!")
+    print("Figure 5 complete! (Panel C moved to supplementary Figure S8)")
     print("="*60)
 
-    plt.close()
+    plt.close('all')
 
 
 if __name__ == "__main__":

@@ -19,7 +19,7 @@
 \newcommand{\claimlabel}[1]{\textbf{[#1]}}
 
 % Title page info
-\title{A Provisional Triage Framework for HIV-1 Lenacapavir Resistance Mutations:\\A Structured Evidence Synthesis}
+\title{Evidence-Based Prioritization of HIV-1 Lenacapavir Resistance Mutations for Surveillance Triage}
 
 \author{Yiheng Yang\\
 School of Future Technology and School of Bioengineering\\
@@ -35,11 +35,11 @@ E-mail: yangyiheng@mail.dlut.edu.cn}
 \begin{abstract}
 \textbf{Background}: Lenacapavir (LEN) is the first-in-class HIV-1 capsid inhibitor approved for heavily treatment-experienced multidrug-resistant HIV-1 infection and, more recently, authorized in the United States for HIV pre-exposure prophylaxis. With the approval and guideline incorporation of twice-yearly injectable lenacapavir for HIV prevention, capsid resistance interpretation is becoming relevant beyond heavily treatment-experienced populations. The central question: which mutations warrant high-priority confirmatory testing and clinical review, and which require subtype-stratified confirmatory testing before interpretation can be finalized?
 
-\textbf{Methods}: We performed a PRISMA-informed structured evidence synthesis rather than a registered systematic review, using PRISMA 2020 flow reporting to document search and screening of 87 records, identifying 11 sources (7 peer-reviewed articles and 4 regulatory/clinical-trial reports) providing 24 quantitative phenotypic observations across 13 mutation genotypes and 3 aggregate phenotype references, spanning 4 subtype strata. Evidence was harmonized on the log$_{10}$ fold-change scale, stratified by context tier, and evaluated using three corroborating evidence dimensions: phenotypic ranking, structural perturbation, and evolutionary conservation.
+\textbf{Methods}: We conducted a structured evidence synthesis informed by selected PRISMA 2020 reporting items. Because the objective was to build a provisional resistance-triage framework rather than estimate a pooled intervention effect, formal meta-analysis and risk-of-bias grading were not attempted. The search identified 87 records; after screening, 11 sources (7 peer-reviewed articles and 4 regulatory/clinical-trial reports) provided 24 quantitative phenotypic observations across 13 mutation genotypes and 3 aggregate phenotype references, spanning 4 subtype strata. Evidence was harmonized on the log$_{10}$ fold-change scale, stratified by context tier, and evaluated using three corroborating evidence dimensions: phenotypic ranking, structural perturbation, and evolutionary conservation.
 
-\textbf{Results}: N57H (4,890-fold) and M66I (3,200-fold) showed the highest and most stable single-mutation resistance signals in the available dataset. Within the sparse available subtype-stratified dataset, adding subtype did not detectably improve model fit, supporting mutation-level triage as a pragmatic first-pass approach rather than proving absence of subtype effects. Q67H+K70R exhibited 78.5-fold context-dependent variability across genetic backgrounds, identifying the highest-priority edge case for future subtype-stratified phenotyping. Structural and evolutionary evidence provided supportive coherence for the mutation-first hierarchy.
+\textbf{Results}: N57H (4,890-fold) and M66I (3,200-fold) showed the highest and most stable single-mutation resistance signals in the available dataset. In the compiled dataset, mutation identity was the only consistently detectable ranking signal. However, the dataset remains underpowered to estimate subtype effects reliably, particularly for combination genotypes. Q67H+K70R exhibited 78.5-fold context-dependent variability across genetic backgrounds, identifying the highest-priority edge case for future subtype-stratified phenotyping. Structural and evolutionary evidence provided supportive coherence for the mutation-first hierarchy.
 
-\textbf{Conclusions}: We propose a provisional three-tier interpretive framework for LEN resistance: Tier 1 (high-priority candidates for subtype-agnostic provisional first-pass triage: N57H and M66I), Tier 2 (enhanced monitoring for context-sensitive combinations), and Tier 3 (research priority for hypothesis-generating signals). This framework provides a provisional scaffold for surveillance-oriented mutation prioritization pending broader validation.
+\textbf{Conclusions}: We propose a provisional three-tier interpretive framework for LEN resistance: Tier 1 (high-priority candidates for subtype-agnostic provisional first-pass triage: N57H and M66I), Tier 2 (enhanced monitoring for context-sensitive combinations), and Tier 3 (research priority for hypothesis-generating signals). This framework provides a basis for surveillance-oriented mutation prioritization pending broader validation.
 \end{abstract}
 
 \textbf{Keywords:} HIV-1, Lenacapavir, Capsid inhibitor, Drug resistance, Evidence synthesis, Surveillance framework, Clinical translation, Provisional interpretive framework
@@ -54,7 +54,7 @@ Lenacapavir (LEN), the first-in-class HIV-1 capsid inhibitor, represents a notab
 
 The central clinical question is: given a newly observed capsid mutation, how should laboratories prioritize confirmatory testing and clinical review? This requires determining whether mutation-level effects alone are sufficient for first-pass surveillance triage, or whether subtype and broader genetic background modulates resistance sufficiently to mandate subtype-stratified interpretation algorithms.
 
-LEN-associated RAMs cluster around two critical structural interfaces of the capsid hexamer: the hydrophobic LEN-binding pocket (L56V, N57H, M66I, Q67H) and the NTD-CTD interface (N74D, K70R, K70N) \cite{Bester2022,Margot2025}. M66I, in particular, introduces a beta-branched side chain that reduces LEN binding through steric interference, as further detailed by recent structural work \cite{MBio2025}. Existing studies have catalogued many LEN-associated phenotypes, but these have not been systematically synthesized under an explicit evidence-strength framework to guide surveillance interpretation and confirmatory testing prioritization.
+LEN-associated RAMs cluster around two critical structural interfaces of the capsid hexamer: the hydrophobic LEN-binding pocket (L56V, N57H, M66I, Q67H) and the NTD-CTD interface (N74D, K70R, K70N) \cite{Bester2022,Margot2025}. Resistance positions are reported using mature capsid (CA/p24) numbering following HXB2 reference unless otherwise specified in the source publication. M66I, in particular, introduces a beta-branched side chain that reduces LEN binding through steric interference, as further detailed by recent structural work \cite{MBio2025}. Existing studies have catalogued many LEN-associated phenotypes, but these have not been systematically synthesized under an explicit evidence-strength framework to guide surveillance interpretation and confirmatory testing prioritization.
 
 The principal risk in current practice is overinterpreting near-zero subtype variance observed in small, imbalanced datasets as universal evidence that subtype effects are absent. This conclusion exceeds what sparse data can support, particularly for combination mutations where context-sensitive effects have been reported. Here, we synthesize available phenotypic, structural, and evolutionary evidence under a three-dimensional corroboration approach to propose a provisional three-tier surveillance-oriented framework.
 
@@ -66,7 +66,7 @@ Our objectives are: (1) determine which explanatory level (mutation vs subtype) 
 
 \subsection{PRISMA-Informed Evidence Identification}
 
-We performed a PRISMA-informed structured evidence synthesis rather than a registered systematic review. Because the goal was to construct a provisional clinical interpretation scaffold rather than estimate a pooled treatment effect, formal risk-of-bias assessment and meta-analysis were not performed. We followed PRISMA 2020 reporting guidelines \cite{Page2021} to document the evidence scope. A systematic literature search was conducted in PubMed using terms: (lenacapavir OR GS-6207) AND (resistance OR capsid OR mutation OR fold-change). Identified: 82 PubMed records + 5 additional sources = 87. After deduplication ($n=78$), title/abstract screening excluded 56 records. Full-text review of 22 records excluded 11 (8 lacking quantitative data; 3 HIV-2 only). Eleven sources (7 peer-reviewed articles, 4 regulatory/clinical-trial reports) provided 24 quantitative fold-change observations meeting inclusion criteria (Figure~\ref{fig:evidence}).
+We performed a structured evidence synthesis informed by selected PRISMA 2020 reporting items. Because the objective was to build a provisional resistance-triage framework rather than estimate a pooled treatment effect, formal risk-of-bias assessment and meta-analysis were not performed. We followed PRISMA 2020 reporting guidelines \cite{Page2021} to document the evidence scope. A systematic literature search was conducted in PubMed using search terms: (lenacapavir OR GS-6207) AND (resistance OR capsid OR mutation OR fold-change). The search was performed on 2024-11-15 with no language restrictions. Identified: 82 PubMed records + 5 additional sources = 87. After deduplication (n=78), title and abstract screening by one reviewer excluded 56 records. Full-text review of 22 records excluded 11 (8 lacking quantitative data; 3 HIV-2 only). The 5 additional sources included: WHO HIVDR reports, FDA prescribing labels, and conference abstracts from CAPELLA/CALIBRATE trials. Eleven sources (7 peer-reviewed articles, 4 regulatory/clinical-trial reports) provided 24 quantitative fold-change observations meeting inclusion criteria (Figure~\ref{fig:evidence}).
 
 \textbf{Inclusion criteria}: (1) Quantitative phenotypic resistance measurement (fold-change vs wild-type); (2) HIV-1 only; (3) Peer-reviewed publication or clinical trial report; (4) Identified resistance mutation(s). \textbf{Exclusion}: HIV-2, qualitative only, review articles.
 
@@ -169,13 +169,13 @@ The evidence landscape was constrained primarily by sparse subtype-stratified ob
 \includegraphics[width=0.95\textwidth]{figures/figure2_core_evidence.pdf}
 \caption{\textbf{Core phenotypic evidence.}
 \textbf{(A)} Raincloud plot showing log$_{10}$FC distributions by mutation ranked by median. Violin (distribution shape), strip (individual observations), and box (median/quartile) summaries are shown. 24 quantitative observations are plotted.
-\textbf{(B)} Pooled estimates with 95\% confidence intervals per mutation. Bar length indicates mean log$_{10}$FC; error bars indicate 95\% CI where n $\geq$ 2; single-observation categories are shown without inferential CI.
+\textbf{(B)} Pooled estimates with descriptive intervals per mutation. Bar length indicates mean log$_{10}$FC; error bars indicate 95\% CI for n $\geq$ 5, mean $\pm$ observed range for n = 2--4, and single observations are shown without interval.
 \textbf{(C)} Model comparison: $\Delta$AIC values for M0 (intercept), M1 (mutation only), M2 (mutation + subtype random effect), and M3 (mutation + study random effect). Lower is better. LOSO cross-validation: RMSE = 1.993, MAE = 1.951 (10 folds).
 \textbf{(D)} Bootstrap ranking stability (1,000 resamples) visualized as Cleveland dot plot. Horizontal position indicates mean rank; error bars indicate $\pm$1 SD. Lower rank = higher resistance. Colors indicate stability: blue-gray (SD $<$ 0.5), gray-green (SD 0.5--1.0), muted red (SD $>$ 1.0). Note: 13 mutation-genotype categories are shown in the primary ranking analysis. Three additional aggregate phenotype categories (GCSMs\_median, Multiclass\_resistant, SDM\_GCSMs) were retained as contextual references in the evidence map but were excluded from mutation-level ranking models.}
 \label{fig:coreevidence}
 \end{figure*}
 
-Model comparison favored M1 (mutation-only, AIC = 36.6) over M0 (intercept-only, AIC = 64.2; $\Delta$AIC = +27.6) and M2 (mutation + subtype, AIC = 45.3; $\Delta$AIC = +8.8). M3 (mutation + study) failed to converge due to singular matrix, reflecting the sparse observation-to-study ratio. Mutation identity captured the most detectable explanatory signal (M1 R$^2$ = 0.924), and the subtype random-effect variance estimate was near zero, but this should be interpreted as non-detection under sparse data rather than evidence of biological absence. M1 showed the lowest AIC among estimable models, although its high apparent R$^2$ should be interpreted cautiously given the sparse observation-to-parameter ratio (24 observations, 13 mutation parameters). Mutation identity explained most within-dataset variation, but leave-one-study-out errors remained large (RMSE = 1.993, MAE = 1.951 across 10 folds; one source was excluded from LOSO evaluation because it contributed only aggregate or non-estimable phenotype information), indicating limited out-of-source predictive accuracy. Therefore, model comparison was used for evidence mapping rather than clinical prediction.
+Model comparison favored M1 (mutation-only, AIC = 36.6) over M0 (intercept-only, AIC = 64.2; $\Delta$AIC = +27.6) and M2 (mutation + subtype, AIC = 45.3; $\Delta$AIC = +8.8). M3 (mutation + study) failed to converge due to singular matrix, reflecting the sparse observation-to-study ratio. Mutation identity captured the most detectable explanatory signal (M1 R$^2$ = 0.924). The subtype random-effect variance estimate was near zero, but this should be interpreted as non-detection under sparse data rather than evidence of biological absence. M1 showed the lowest AIC among estimable models, although its high apparent R$^2$ should be interpreted cautiously given the sparse observation-to-parameter ratio (24 observations, 13 mutation parameters). Leave-one-study-out errors remained large (RMSE = 1.993, MAE = 1.951 across 10 folds; one source was excluded from LOSO evaluation because it contributed only aggregate or non-estimable phenotype information), indicating limited out-of-source predictive accuracy. Therefore, model comparison was used for evidence mapping rather than clinical prediction.
 
 Bootstrap ranking stability (1,000 resamples) showed persistent top ordering: N57H (mean rank 1.0, SD 0.0) and M66I (mean rank 1.9, SD 0.4) exhibited strong ranking stability, supporting robustness of rank-level interpretation for the top single mutations. K70N+N74K showed moderate ranking stability (mean rank 3.1, SD 0.8; Figure~\ref{fig:coreevidence}D).
 
@@ -233,12 +233,11 @@ Subtype-stratified baseline frequencies at resistance positions remained approxi
 \includegraphics[width=0.90\textwidth,keepaspectratio]{figures/figure5_evolution.pdf}
 \caption{\textbf{Evolutionary constraints and fitness context.}
 \textbf{(A)} Conservation scores at 8 selected LEN-contact or resistance-associated residues from published population surveys. Bar height indicates conservation score; green = highly conserved ($\geq$0.95), blue = moderately conserved. Asterisks indicate known resistance positions; dashed line at 0.95 indicates threshold for high conservation.
-\textbf{(B)} Subtype-specific baseline mutation frequencies at resistance positions ($<$1\% across subtypes B, C, CRF02\_AG, and D), extracted from published population-surveillance summaries without pseudo-count smoothing; these values are intended to visualize relative baseline rarity rather than to provide definitive subtype prevalence estimates.
-\textbf{(C)} Fitness cost vs resistance level (3 published observations). Data remain insufficient for robust correlation, highlighting the need for expanded fitness profiling of LEN-resistant mutants.}
+\textbf{(B)} Subtype-specific baseline mutation frequencies at resistance positions ($<$1\% across subtypes B, C, CRF02\_AG, and D), extracted from published population-surveillance summaries without pseudo-count smoothing; these values are intended to visualize relative baseline rarity rather than to provide definitive subtype prevalence estimates.}
 \label{fig:evolution}
 \end{figure*}
 
-Under the three-tier framework, first-pass mutation-level triage is supported by current evidence, while subtype adds limited measurable explanatory value beyond mutation identity in the compiled dataset. Detailed tier assignments are provided in Table~\ref{tab:framework}. High conservation at LEN-contact residues across subtypes provides evolutionary rationale for why mutation-level effects dominate current observations.
+Under the three-tier framework, first-pass mutation-level triage is supported by current evidence, while the dataset remains underpowered to estimate subtype effects reliably. Detailed tier assignments are provided in Table~\ref{tab:framework}. High conservation at LEN-contact residues across subtypes provides evolutionary context for mutation-level interpretation.
 
 \input{tables/table1_framework.tex}
 
@@ -288,12 +287,12 @@ The framework is intended as a provisional interpretive scaffold rather than a f
 \section{Conclusion}
 %============================================================
 
-Under the available evidence, HIV-1 LEN resistance ranking is driven primarily by mutation identity. At the current evidence depth, subtype contributes limited additional explanatory value beyond mutation-level effects. These findings support mutation-level first-pass surveillance triage in the current evidence landscape and define targets for subtype-stratified phenotyping.
+Under the available evidence, HIV-1 LEN resistance ranking is driven primarily by mutation identity. At the current evidence depth, the dataset remains underpowered to estimate subtype effects reliably, particularly for combination genotypes. These findings support mutation-level first-pass surveillance triage in the current evidence landscape and define targets for subtype-stratified phenotyping.
 
 %============================================================
 \section*{Data Availability}
 %============================================================
-Processed datasets (harmonized phenotype data, model comparison results, bootstrap rankings, genetic barrier scores) and analysis scripts are available at Zenodo: \url{https://doi.org/10.5281/zenodo.20159364}. Source data were extracted from published clinical trial reports (CAPELLA, CALIBRATE), peer-reviewed publications, and public databases as detailed in the Methods section.
+The processed datasets and analysis scripts are archived on Zenodo \url{https://doi.org/10.5281/zenodo.20159364}. The repository contains the harmonized phenotype table, model-comparison outputs, bootstrap rankings, genetic-barrier calculations, and scripts required to reproduce the figures and tables. Source data were extracted from published clinical trial reports (CAPELLA, CALIBRATE), peer-reviewed publications, and public databases as detailed in the Methods section.
 
 %============================================================
 \section*{Acknowledgments}
@@ -358,6 +357,10 @@ Prioritized next steps for expanding the evidence base, including estimated feas
 \bigskip
 \noindent\textbf{Figure S7. Sensitivity Analysis of Mutation Ranking Stability.}
 Cleveland dot plots showing mean rank ($\pm$ SD) for mutations across three data perturbations: (left) full dataset (baseline), (center) removing single-observation mutations, (right) subtype B only. N57H and M66I remain the top-ranked mutations under all perturbations, supporting ranking robustness.
+
+\bigskip
+\noindent\textbf{Figure S8. Fitness Cost vs Resistance Level.}
+Fitness cost vs resistance level (3 published observations: N57H, M66I, Q67H). Scatter plot showing relative fitness on x-axis and log$_{10}$FC on y-axis. Data remain insufficient for robust correlation analysis, highlighting the need for expanded fitness profiling of LEN-resistant mutants.
 
 \bigskip
 \noindent\textbf{Table S2.} Genetic Barrier Scores for LEN Resistance-Associated Mutations.
@@ -435,7 +438,7 @@ Cleveland dot plots showing mean rank ($\pm$ SD) for mutations across three data
 
 \bibitem{Sanjuan2004} Sanju\'an R, Moya A, Elena SF. The contribution of epistasis to the architecture of fitness in an RNA virus. \textit{Proc Natl Acad Sci USA} 2004;101(43):15376-15379.
 
-\bibitem{Sheldon2019} Sheldon J, Beach NM, Moreno E, et al. Viral fitness: history and relevance for viral pathogenesis and antiviral interventions. \textit{Pathog Dis} 2019;77(2):ftz021.
+\bibitem{Domingo2019} Domingo E, de Ávila AI, Gallego I, Sheldon J, Perales C. Viral fitness: history and relevance for viral pathogenesis and antiviral interventions. \textit{Pathog Dis} 2019;77(2):ftz021.
 
 \end{thebibliography}
 
@@ -464,8 +467,8 @@ Cleveland dot plots showing mean rank ($\pm$ SD) for mutations across three data
 \textbf{(C)} Structure-phenotype scatter correlation ($r = 0.910$, $p = 0.004$); dashed line indicates linear regression.
 
 \textbf{Figure 5. Evolutionary constraints and fitness context.}
-\textbf{(A)} Conservation scores at 8 selected LEN-contact or resistance-associated residues from published population surveys. Bar height indicates conservation; green = highly conserved ($\geq$0.95), blue = moderately conserved. Asterisks indicate known resistance positions; dashed line at 0.95 indicates threshold for high conservation.\\
+\textbf{(A)} Conservation scores at 8 selected LEN-contact or resistance-associated residues from published population surveys. Bar height indicates conservation score; green = highly conserved ($\geq$0.95), blue = moderately conserved. Asterisks indicate known resistance positions; dashed line at 0.95 indicates threshold for high conservation.\\
 \textbf{(B)} Subtype-specific baseline mutation frequencies at resistance positions ($<$1\% across subtypes B, C, CRF02\_AG, and D).\\
-\textbf{(C)} Fitness cost vs resistance level (3 published observations); data remain insufficient for robust correlation.
+\textbf{Supplementary Figure S8.} Fitness cost vs resistance level (3 published observations); data remain insufficient for robust correlation.
 
 \end{document}

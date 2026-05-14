@@ -135,7 +135,7 @@ def create_raincloud_panel(ax):
 
 
 def create_pooled_forest(ax):
-    """Panel B: Pooled estimates with 95% CI (forest plot - no tier coloring)"""
+    """Panel B: Pooled estimates with descriptive intervals (forest plot - no tier coloring)"""
 
     df = pd.read_csv(DATA_DIR / "harmonized_phenotype_data.csv")
     df = df[df['log10_FC'].notna()].copy()
@@ -145,39 +145,58 @@ def create_pooled_forest(ax):
     df = df[~df['Mutation'].isin(aggregate_mutations)].copy()
 
     # Calculate summary
-    summary = df.groupby('Mutation')['log10_FC'].agg(['mean', 'std', 'count']).reset_index()
-    summary['sem'] = summary['std'] / np.sqrt(summary['count'])
+    summary = df.groupby('Mutation')['log10_FC'].agg(['mean', 'std', 'count', 'min', 'max']).reset_index()
     summary = summary.sort_values('mean', ascending=True)
 
     y_pos = range(len(summary))
     bar_color = '#6B8BA4'
 
-    # Horizontal bars
+    # Horizontal bars (mean)
     bars = ax.barh(y_pos, summary['mean'], color=bar_color, alpha=0.8, height=0.6, edgecolor='black')
 
-    # 95% CI error bars
+    # Descriptive intervals: 95% CI for n>=5, range for n<5
     for i, (_, row) in enumerate(summary.iterrows()):
-        if not np.isnan(row['sem']) and row['count'] >= 2:
-            ax.errorbar(row['mean'], i, xerr=row['sem'] * 1.96,
+        n = int(row['count'])
+        mean_val = row['mean']
+        min_val = row['min']
+        max_val = row['max']
+
+        if n >= 5 and not np.isnan(row['std']):
+            # 95% CI for larger samples
+            sem = row['std'] / np.sqrt(n)
+            ax.errorbar(mean_val, i, xerr=sem * 1.96,
                        fmt='none', color='black', capsize=3, capthick=1.5, elinewidth=1.5)
-            n_label = f"n={int(row['count'])}"
-        elif row['count'] == 1:
-            n_label = "n=1 (no CI)"
+            label_text = f"n={n}"
+        elif n >= 2:
+            # Mean with observed range for smaller samples
+            ax.errorbar(mean_val, i, xerr=[[mean_val - min_val], [max_val - mean_val]],
+                       fmt='none', color='#6B8BA4', capsize=4, capthick=1.2, elinewidth=1.2,
+                       label='Mean ± observed range')
+            label_text = f"n={n}"
         else:
-            n_label = f"n={int(row['count'])}"
-        ax.text(row['mean'] + 0.15, i, n_label,
+            # n=1: mean only, no interval
+            label_text = f"n=1 (single obs.)"
+
+        ax.text(mean_val + 0.15, i, label_text,
                va='center', fontsize=6, color='gray')
 
     ax.set_yticks(y_pos)
     ax.set_yticklabels(summary['Mutation'], fontsize=8)
     ax.set_xlabel('log$_{10}$(Fold-Change)', fontsize=10, weight='bold')
-    ax.set_title('B. Pooled Estimates with 95% CI', fontsize=11, weight='bold', loc='left')
+    ax.set_title('B. Pooled Estimates (mean ± interval)', fontsize=11, weight='bold', loc='left')
     ax.grid(axis='x', alpha=0.3)
 
     # Reference lines
     ax.axvline(x=1, color='gray', linestyle='--', alpha=0.5)
     ax.axvline(x=2, color='gray', linestyle='--', alpha=0.5)
     ax.axvline(x=3, color='#B85450', linestyle='--', alpha=0.5)
+
+    # Legend for interval types
+    legend_elements = [
+        Patch(facecolor='black', label='95% CI (n ≥ 5)', alpha=0.8),
+        Patch(facecolor='#6B8BA4', label='Mean ± range (n = 2-4)', alpha=0.8),
+    ]
+    ax.legend(handles=legend_elements, loc='lower right', fontsize=6, framealpha=0.9)
 
 
 def create_model_comparison(ax):
