@@ -1,0 +1,26 @@
+% =============================================================================
+% FIGURE PLACEHOLDER - CSO/ROS Workflow Flowchart
+% =============================================================================
+% This is a placeholder for the actual flowchart figure
+% Replace with TikZ code or \includegraphics command when figure is ready
+
+\begin{tikzpicture}[node distance=2cm, minimum width=3cm, minimum height=1cm]
+    % Nodes
+    \node (start) [terminal] {Sequence Database Query};
+    \node (prrt) [process, right of=start, xshift=4cm] {PR/RT Sequences};
+    \node (ca) [process, below of=prrt, yshift=-2cm] {CA Sequences};
+    \node (qc) [process, right of=prrt, xshift=4cm] {QC Filters};
+    \node (cso) [decision, right of=qc, xshift=3cm] {CSO};
+    \node (ros) [process, below of=cso, yshift=-2cm] {ROS Calculation};
+    \node (cir) [process, below of=ros, yshift=-2cm] {CIR-SRI};
+    \node (end) [terminal, below of=cir, yshift=-2cm] {Priority Countries};
+
+    % Arrows
+    \draw[->] (start) -- (prrt);
+    \draw[->] (start) -- (ca);
+    \draw[->] (prrt) -- (qc);
+    \draw[->] (qc) -- (cso);
+    \draw[->] (cso) -- (ros);
+    \draw[->] (ros) -- (cir);
+    \draw[->] (cir) -- (end);
+\end{tikzpicture}

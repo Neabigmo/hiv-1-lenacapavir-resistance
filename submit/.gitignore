@@ -14,10 +14,3 @@ __pycache__/
 # Past versions - not for version control
 past/
 
-# PyMOL session files
-*.pse
-*.pdb1
-
-# Large data files
-*.cif
-
