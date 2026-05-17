@@ -1,4 +1,4 @@
-data/raw/
+# LaTeX artifacts
 *.pdf
 *.aux
 *.log
@@ -6,18 +6,19 @@ data/raw/
 *.toc
 *.bbl
 *.blg
+
+# Python
 __pycache__/
 *.pyc
+
+# Environment
 .env
 .DS_Store
 
-# Past versions - not for version control
-past/
+# Raw data (not included in repo)
+data/raw/
 
-# PyMOL session files
+# Structural biology binaries
 *.pse
 *.pdb1
-
-# Large data files
 *.cif
-
